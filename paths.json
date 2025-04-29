@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/xwalk/:/",
-    "/content/xwalk/configuration:/.helix/config.json",
-    "/content/xwalk/metadata:/metadata.json"
+    "/content/mirko-testing/:/",
+    "/content/mirko-testing/configuration:/.helix/config.json",
+    "/content/mirko-testing/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/xwalk/"
+    "/content/mirko-testing/"
   ]
 }
