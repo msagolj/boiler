@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/mirko-testing/:/",
-    "/content/mirko-testing/configuration:/.helix/config.json",
-    "/content/mirko-testing/metadata:/metadata.json"
+    "/content/boiler/:/",
+    "/content/boiler/configuration:/.helix/config.json",
+    "/content/boiler/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/mirko-testing/"
+    "/content/boiler/"
   ]
 }
