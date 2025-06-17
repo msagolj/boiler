@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/boiler/:/",
-    "/content/boiler/configuration:/.helix/config.json",
-    "/content/boiler/metadata:/metadata.json"
+    "/content/xwalk/:/",
+    "/content/xwalk/configuration:/.helix/config.json",
+    "/content/xwalk/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/boiler/"
+    "/content/xwalk/"
   ]
 }
