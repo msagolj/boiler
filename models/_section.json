@@ -38,6 +38,8 @@
       "id": "section",
       "components": [
         "text",
+        "textv2",
+        "description",
         "image",
         "button",
         "title",

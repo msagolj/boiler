@@ -17,6 +17,34 @@
           }
         },
         {
+          "title": "Text v2",
+          "id": "textv2",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/text/v2/text",
+                "template": {}
+              }
+            }
+          }
+        },
+        {
+          "title": "Description (Text v2)",
+          "id": "description",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/text/v2/text",
+                "template": {
+                  "blockLabel": "Description",
+                  "blockFilter": "description",
+                  "text": "add your description here"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Title",
           "id": "title",
           "plugins": {

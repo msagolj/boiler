@@ -9,6 +9,8 @@
     "id": "section",
     "components": [
       "text",
+      "textv2",
+      "description",
       "image",
       "button",
       "title",
@@ -38,5 +40,21 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "description",
+    "components": [],
+    "rte": {
+      "format": [],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": [],
+      "insert": [],
+      "advanced": [],
+      "extensions": [],
+      "editor": [],
+      "block": []
+    }
   }
 ]
