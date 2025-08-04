@@ -99,15 +99,9 @@
     "id": "section",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "text",
         "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          }
-        ]
+        "label": "Style"
       }
     ]
   },
