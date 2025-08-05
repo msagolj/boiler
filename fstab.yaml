@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p130360-e1740374-cmstg.adobeaemcloud.com/bin/franklin.delivery/msagolj/boiler/main"
+    url: "https://author-p130360-e1740374.adobeaemcloud.com/bin/franklin.delivery/msagolj/boiler/main"
     type: "markup"
     suffix: ".html"
