@@ -142,6 +142,13 @@
         "label": "Rows"
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "kuckuck",
+        "value": "",
+        "label": "Kuckuck"
+      },
+      {
         "component": "select",
         "name": "classes",
         "label": "Variants",
