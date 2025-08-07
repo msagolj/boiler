@@ -2,7 +2,8 @@
   "mappings": [
     "/content/xwalk/:/",
     "/content/xwalk/configuration:/.helix/config.json",
-    "/content/xwalk/metadata:/metadata.json"
+    "/content/xwalk/metadata:/metadata.json",
+    "/content/xwalk/live-copy-root/SITES-31621LiveCopy:/live-copy.json"
   ],
   "includes": [
     "/content/xwalk/"
