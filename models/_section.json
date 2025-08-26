@@ -37,6 +37,7 @@
     {
       "id": "section",
       "components": [
+        "multi",
         "text",
         "image",
         "button",
