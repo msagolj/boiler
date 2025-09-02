@@ -70,7 +70,7 @@
           "component": "richtext",
           "name": "richtext-multi",
           "label": "Rich Text (Multi)",
-          "description": "NOTE: there are issues saving multiple Rich Texts",
+          "description": "NOTE: multi RTE save fails with lists in content",
           "multi": true
         },
         {
@@ -157,15 +157,13 @@
           "name": "contentfragment-single",
           "label": "Content Fragment (Single)",
           "variationName": "variation-single",
-          "description": "NOTE: What about the variationName property ?",
           "multi": false
         },
         {
           "component": "aem-content-fragment",
           "name": "contentfragment-multi",
           "label": "Content Fragment (Multi)",
-          "variationName": "variation-multi",
-          "description": "NOTE: What about the variationName property ?",
+          "description": "NOTE: cant use variationName property",
           "multi": true
         },
         {
