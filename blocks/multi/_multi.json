@@ -22,51 +22,243 @@
       "fields": [
         {
           "component": "text",
-          "valueType": "string",
-          "name": "text",
+          "name": "classes_single",
+          "label": "Block Options (Single)",
+          "description": "Style your block with class options",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "classes_multi",
+          "label": "Block Options (Multi)",
+          "description": "Style your block with class options",
+          "multi": true
+        },
+        {
+          "component": "tab",
           "label": "Text",
+          "name": "text-tab"
+        },
+        {
+          "component": "text",
+          "name": "text-single",
+          "label": "Text (Single)",
+          "description": "Enter Text",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "text-multi",
+          "label": "Text (Multi)",
           "description": "Enter one or more texts",
           "multi": true
         },
         {
-          "component": "richtext",
-          "name": "richtext",
-          "value": "",
+          "component": "tab",
           "label": "Rich Text",
-          "valueType": "string",
+          "name": "richtext-tab"
+        },  
+        {
+          "component": "richtext",
+          "name": "richtext-single",
+          "label": "Rich Text (Single)",
+          "description": "Enter a Rich Text",
+          "multi": false
+        },      
+        {
+          "component": "richtext",
+          "name": "richtext-multi",
+          "label": "Rich Text (Multi)",
+          "description": "NOTE: there are issues saving multiple Rich Texts",
           "multi": true
         },
         {
+          "component": "tab",
+          "label": "image",
+          "name": "image-tab"
+        },
+        {
           "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
+          "name": "image-single",
+          "label": "Image (Single)",
+          "description": "Select an Image",
+          "multi": false
+        },
+        {
+          "component": "reference",
+          "name": "image-multi",
+          "label": "Image (Multi)",
           "description": "Select one or more images",
           "multi": true
         },
         {
-          "component": "container",
-          "label": "Image Container",
-          "description": "Select one or more images + alt text",
-          "name": "imageContainer",
-          "multi": true,
-          "fields" : [
+          "component": "tab",
+          "label": "Tags",
+          "name": "tags-tab"
+        },
+        {
+          "component": "aem-tag",
+          "name": "tag-single",
+          "label": "Tag (Single)",
+          "description": "Select one tag",
+          "multi": false
+        },
+        {
+          "component": "aem-tag",
+          "name": "tag-multi",
+          "label": "Tag (Multi)",
+          "description": "NOTE: Multi doesn't seem to be supported",
+          "multi": true
+        },
+        {
+          "component": "tab",
+          "label": "Date",
+          "name": "date-tab"
+        },
+        {
+          "component": "date-time",
+          "name": "date-single",
+          "label": "Date (Single)",
+          "description": "Select one date",
+          "multi": false
+        },
+        {
+          "component": "date-time",
+          "name": "date-multi",
+          "label": "Date (Multi)",
+          "description": "NOTE: Multi doesn't seem to be supported",
+          "multi": true
+        },
+        {
+          "component": "tab",
+          "label": "Content",
+          "name": "content-tab"
+        },
+        {
+          "component": "aem-content",
+          "name": "content-single",
+          "label": "Content (Single)",
+          "multi": false
+        },
+        {
+          "component": "aem-content",
+          "name": "content-multi",
+          "label": "Content (Multi)",
+          "multi": true
+        },
+        {
+          "component": "tab",
+          "label": "Content Fragment",
+          "name": "contentfragment-tab"
+        },
+        {
+          "component": "aem-content-fragment",
+          "name": "contentfragment-single",
+          "label": "Content Fragment (Single)",
+          "variationName": "variation-single",
+          "description": "NOTE: What about the variationName property ?",
+          "multi": false
+        },
+        {
+          "component": "aem-content-fragment",
+          "name": "contentfragment-multi",
+          "label": "Content Fragment (Multi)",
+          "variationName": "variation-multi",
+          "description": "NOTE: What about the variationName property ?",
+          "multi": true
+        },
+        {
+          "component": "tab",
+          "label": "Multi-Select",
+          "name": "multiselect-tab"
+        },
+        {
+          "component": "multiselect",
+          "name": "multiselect-single",
+          "label": "Multi-Select (Single)",
+          "options": [
             {
-              "component": "reference",
-              "valueType": "string",
-              "name": "image",
-              "label": "Image",
-              "description": "Select Image",
-              "multi": true
+              "name": "Option 1",
+              "value": "option1"
             },
             {
-              "component": "text",
-              "valueType": "string",
-              "name": "imageAlt",
-              "label": "Alt",
-              "value": ""
+              "name": "Option 2",
+              "value": "option2"
             }
-          ]
+          ],
+          "multi": false
+        },
+        {
+          "component": "multiselect",
+          "name": "multiselect-multi",
+          "label": "Multi-Select (Multi)",
+          "description": "NOTE: Multi doesn't seem to be supported",
+          "options": [
+            {
+              "name": "Option 1",
+              "value": "option1"
+            },
+            {
+              "name": "Option 2",
+              "value": "option2"
+            }
+          ],
+          "multi": true
+        },
+        {
+          "component": "tab",
+          "label": "Number",
+          "name": "number-tab"
+        },
+        {
+          "component": "number",
+          "name": "number-single",
+          "label": "Number (Single)",
+          "multi": false
+        },
+        {
+          "component": "number",
+          "name": "number-multi",
+          "label": "Number (Multi)",
+          "multi": true
+        },
+        {
+          "component": "tab",
+          "label": "Select",
+          "name": "select-tab"
+        },
+        {
+          "component": "select",
+          "name": "select-single",
+          "label": "Select (Single)",
+          "options": [
+            {
+              "name": "Option 1",
+              "value": "option1"
+            },
+            {
+              "name": "Option 2",
+              "value": "option2"
+            }
+          ],
+          "multi": false
+        },
+        {
+          "component": "select",
+          "name": "select-multi",
+          "label": "Select (Multi)",
+          "description": "NOTE: Multi doesn't seem to be supported",
+          "options": [
+            {
+              "name": "Option 1",
+              "value": "option1"
+            },
+            {
+              "name": "Option 2",
+              "value": "option2"
+            }
+          ],
+          "multi": true
         }
       ]
     }

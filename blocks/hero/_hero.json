@@ -30,6 +30,13 @@
         {
           "component": "text",
           "valueType": "string",
+          "name": "classes",
+          "label": "Classes",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
           "name": "imageAlt",
           "label": "Alt",
           "value": ""

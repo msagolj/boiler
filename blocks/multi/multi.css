@@ -1,0 +1,29 @@
+.block.multi {
+  border: 2px solid black;
+}
+
+.block.multi > div {
+  display: flex;
+  flex-direction: row nowrap;
+  gap: 10px;
+  flex: 1 0 auto;
+}
+
+.block.multi > div.block-options {
+  background-color: #90EE90;
+}
+
+.block.multi > div:not(:first-child) {
+  border-top: 1px solid black;
+}
+
+.block.multi > div > div:first-child {
+  width: 30%;
+}
+.block.multi > div > div:last-child {
+  width: 70%;
+}
+
+.block.multi > div > div:not(:first-child) {
+  border-left: 1px solid black;
+}
