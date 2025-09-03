@@ -432,6 +432,39 @@
           }
         ],
         "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "Grouping",
+        "name": "grouping-tab"
+      },
+      {
+        "component": "text",
+        "name": "grouping_text1",
+        "label": "Text 1 (Single, grouping)",
+        "description": "Enter Text",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "grouping_text2",
+        "label": "Text 2 (Single, grouping)",
+        "description": "Enter Text",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "groupingmulti_text1",
+        "label": "Text 1 (Multi, groupingmulti)",
+        "description": "Enter Texts",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "groupingmulti_text2",
+        "label": "Text 2 (Multi, groupingmulti)",
+        "description": "Enter Texts",
+        "multi": true
       }
     ]
   }
