@@ -279,14 +279,14 @@
         },
         {
           "component": "text",
-          "name": "multi_text1",
+          "name": "groupingmulti_text1",
           "label": "Text 1 (Multi, groupingmulti)",
           "description": "Enter Texts",
           "multi": true
         },
         {
           "component": "text",
-          "name": "multi_text2",
+          "name": "groupingmulti_text2",
           "label": "Text 2 (Multi, groupingmulti)",
           "description": "Enter Texts",
           "multi": true
