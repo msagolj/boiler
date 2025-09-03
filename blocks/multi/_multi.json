@@ -260,8 +260,8 @@
         },
         {
           "component": "tab",
-          "label": "Grouping",
-          "name": "grouping-tab"
+          "label": "Grouping (single)",
+          "name": "groupingsingle-tab"
         },
         {
           "component": "text",
@@ -278,6 +278,11 @@
           "multi": false
         },
         {
+          "component": "tab",
+          "label": "Grouping (multi)",
+          "name": "groupingmulti-tab"
+        },
+        {
           "component": "text",
           "name": "groupingmulti_text1",
           "label": "Text 1 (Multi, groupingmulti)",
@@ -288,6 +293,25 @@
           "component": "text",
           "name": "groupingmulti_text2",
           "label": "Text 2 (Multi, groupingmulti)",
+          "description": "Enter Texts",
+          "multi": true
+        },
+        {
+          "component": "tab",
+          "label": "Grouping (mixed)",
+          "name": "groupingmixed-tab"
+        },
+        {
+          "component": "text",
+          "name": "groupingmixed_text1",
+          "label": "Text 1 (mixed, groupingmixed)",
+          "description": "Enter Text",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "groupingmixed_text2",
+          "label": "Text 2 (mixed, groupingmixed)",
           "description": "Enter Texts",
           "multi": true
         }

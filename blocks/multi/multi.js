@@ -19,7 +19,8 @@ export default async function decorate(block) {
         if (fieldName.includes('_')) {
           const groupName = fieldName.split('_')[0];
           if (groupName === previousGroupName) {
-            previousDiv.textContent = `${previousDiv.textContent} ${fieldName}`;
+            previousDiv.appendChild(document.createElement('br'));
+            previousDiv.appendChild(document.createTextNode(fieldName));
           } else {
             const div = document.createElement('div');
             div.textContent = fieldName;
