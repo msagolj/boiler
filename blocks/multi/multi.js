@@ -14,7 +14,6 @@ export default async function decorate(block) {
       let previousDiv = null;
       let rowIndex = 0;
       fieldNames.forEach((fieldName, index) => {
-        console.log(fieldName);
         // if it has a grouping prefix
         if (fieldName.includes('_')) {
           const groupName = fieldName.split('_')[0];
