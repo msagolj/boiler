@@ -58,7 +58,7 @@ function addLabels(fields, block, tableRowCounter, containerLabel = null) {
     label.classList.add(`label`);
     label.appendChild(document.createTextNode(`PROPERTY: ${field.name}`));
     if(!containerLabel) {
-      block.children[tableRowCounter]?.firstElementChild?.appendChild(label);
+      block.children[tableRowCounter].firstElementChild.appendChild(label);
       tableRowCounter++;
     } else {
       containerLabel.appendChild(label);
@@ -67,7 +67,7 @@ function addLabels(fields, block, tableRowCounter, containerLabel = null) {
 }
 
 export default async function decorate(block) {
-  
+/*  
   // load the component-models.json file
   const componentModels = await fetch(`${window.hlx.codeBasePath}/component-models.json`);
   if (!componentModels.ok) return;
@@ -93,14 +93,15 @@ export default async function decorate(block) {
 
   addLabels(flattenedFields, block, tableRowCounter);
 
+  */
   // create block header with block options
   const blockOptionDiv = document.createElement('div');
   blockOptionDiv.classList.add('block-options');
   const value = document.createElement('div');
 
   let classes = Array.from(block.classList)
-    .filter(cls => cls !== 'block' && cls !== 'multi');
-  value.textContent = `Multi (${classes.join(' ')})`;
+    .filter(cls => cls !== 'block' && cls !== 'multikeyvalue');
+  value.textContent = `Key Value Block (${classes.join(' ')})`;
 
   blockOptionDiv.append(value);
   // append div as first child of block

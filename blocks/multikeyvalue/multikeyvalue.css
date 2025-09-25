@@ -1,0 +1,41 @@
+/* Table border styles */
+.block.multikeyvalue {
+  border: 2px solid black;
+  margin-bottom: 20px;;
+}
+
+.block.multikeyvalue > div:not(:first-child) {
+  border-top: 1px solid black; 
+}
+
+.block.multikeyvalue > div > div {
+  width: 50%;
+  padding: 5px;
+}
+
+.block.multikeyvalue > div > div:not(:first-child) {
+  border-left: 1px solid black;
+}
+
+/* each table row is flexbox */
+.block.multikeyvalue > div {
+  display: flex;
+  gap: 10px;
+  min-height: 60px;
+  position: relative;
+}
+
+/* block options row styles */
+.block.multikeyvalue > div.block-options {
+  background-color: #90EE90;
+}
+
+.block.multikeyvalue > div.block-options > div {
+  width:100%;
+}
+
+/* hr separator styles */
+.block.multikeyvalue hr {
+  border: 1px solid red;
+  width: 100%;
+}

@@ -9,6 +9,7 @@
     "id": "section",
     "components": [
       "multi",
+      "multikeyvalue",
       "text",
       "image",
       "button",

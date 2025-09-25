@@ -1,29 +1,59 @@
+/* Table border styles */
 .block.multi {
   border: 2px solid black;
 }
 
+.block.multi > div:not(:first-child) {
+  border-top: 1px solid black; 
+}
+
+.block.multi > div > div:not(:first-child) {
+  border-left: 1px solid black;
+}
+
+/* each table row is  flexbox */
 .block.multi > div {
   display: flex;
   flex-direction: row nowrap;
   gap: 10px;
   flex: 1 0 auto;
+  min-height: 60px;
+  position: relative;
+  padding: 5px;
 }
 
+/* block options row styles */
 .block.multi > div.block-options {
   background-color: #90EE90;
 }
 
-.block.multi > div:not(:first-child) {
-  border-top: 1px solid black;
+/* label styles */
+.block.multi  div.label { 
+  background-color: #6464cf;
+  color: white;
+  position: absolute;
+  font-size: 12px;
+  border-bottom-left-radius: 5px;
+  padding: 5px;
+  top: 0;
+  right: 0;
 }
 
-.block.multi > div > div:first-child {
-  width: 30%;
-}
-.block.multi > div > div:last-child {
-  width: 70%;
+.block.multi div[class*="grouping-"].label { 
+  background-color: green
 }
 
-.block.multi > div > div:not(:first-child) {
-  border-left: 1px solid black;
+.block.multi div[class*="container-"].label { 
+  background-color: orange
+}
+
+.block.multi div[class*="grouping-"].label div.label,
+.block.multi div[class*="container-"].label div.label{ 
+  position: relative;
+}
+
+/* hr separator styles */
+.block.multi hr {
+  border: 1px solid red;
+  width: 100%;
 }

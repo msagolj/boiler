@@ -196,6 +196,11 @@
     "id": "multi",
     "fields": [
       {
+        "component": "tab",
+        "label": "Block Options",
+        "name": "block-options-tab"
+      },
+      {
         "component": "text",
         "name": "classes_single",
         "label": "Block Options (Single)",
@@ -217,14 +222,14 @@
       {
         "component": "text",
         "name": "text-single",
-        "label": "Text (Single)",
+        "label": "text-single",
         "description": "Enter Text",
         "multi": false
       },
       {
         "component": "text",
         "name": "text-multi",
-        "label": "Text (Multi)",
+        "label": "text-multi",
         "description": "Enter one or more texts",
         "multi": true
       },
@@ -236,15 +241,15 @@
       {
         "component": "richtext",
         "name": "richtext-single",
-        "label": "Rich Text (Single)",
+        "label": "richtext-single",
         "description": "Enter a Rich Text",
         "multi": false
       },
       {
         "component": "richtext",
         "name": "richtext-multi",
-        "label": "Rich Text (Multi)",
-        "description": "NOTE: multi RTE save fails with lists in content",
+        "label": "richtext-multi",
+        "description": "Enter Multiple Rich Texts",
         "multi": true
       },
       {
@@ -255,15 +260,15 @@
       {
         "component": "reference",
         "name": "image-single",
-        "label": "Image (Single)",
+        "label": "image-single",
         "description": "Select an Image",
         "multi": false
       },
       {
         "component": "reference",
         "name": "image-multi",
-        "label": "Image (Multi)",
-        "description": "Select one or more images",
+        "label": "image-multi",
+        "description": "Select multiple images",
         "multi": true
       },
       {
@@ -274,16 +279,9 @@
       {
         "component": "aem-tag",
         "name": "tag-single",
-        "label": "Tag (Single)",
-        "description": "Select one tag",
+        "label": "tag-single",
+        "description": "NOTE: 'multi' isnt supported for 'tags' in UE",
         "multi": false
-      },
-      {
-        "component": "aem-tag",
-        "name": "tag-multi",
-        "label": "Tag (Multi)",
-        "description": "NOTE: Multi doesn't seem to be supported",
-        "multi": true
       },
       {
         "component": "tab",
@@ -293,90 +291,71 @@
       {
         "component": "date-time",
         "name": "date-single",
-        "label": "Date (Single)",
-        "description": "Select one date",
+        "label": "date-single",
+        "description": "NOTE: 'multi' isnt supported for 'date' in UE",
         "multi": false
       },
       {
-        "component": "date-time",
-        "name": "date-multi",
-        "label": "Date (Multi)",
-        "description": "NOTE: Multi doesn't seem to be supported",
-        "multi": true
-      },
-      {
         "component": "tab",
-        "label": "Content",
+        "label": "AEM Content",
         "name": "content-tab"
       },
       {
         "component": "aem-content",
         "name": "content-single",
-        "label": "Content (Single)",
+        "label": "content-single",
         "multi": false
       },
       {
         "component": "aem-content",
         "name": "content-multi",
-        "label": "Content (Multi)",
+        "label": "content-multi",
         "multi": true
       },
       {
         "component": "tab",
-        "label": "Content Fragment",
+        "label": "AEM Content Fragment",
         "name": "contentfragment-tab"
       },
       {
         "component": "aem-content-fragment",
         "name": "contentfragment-single",
-        "label": "Content Fragment (Single)",
+        "label": "contentfragment-single",
         "variationName": "variation-single",
         "multi": false
       },
       {
         "component": "aem-content-fragment",
         "name": "contentfragment-multi",
-        "label": "Content Fragment (Multi)",
-        "description": "NOTE: cant use variationName property",
+        "label": "contentfragment-multi",
+        "description": "NOTE: cant use variationName property, in that case you would use a multi container",
         "multi": true
       },
       {
         "component": "tab",
-        "label": "Multi-Select",
+        "label": "Multi Select",
         "name": "multiselect-tab"
       },
       {
         "component": "multiselect",
         "name": "multiselect-single",
-        "label": "Multi-Select (Single)",
+        "label": "multiselect-single",
+        "description": "NOTE: 'multi' isnt supported for 'multiselect' in UE",
         "options": [
           {
-            "name": "Option 1",
-            "value": "option1"
+            "name": "Multi Select Option 1",
+            "value": "multiselect-option1"
           },
           {
-            "name": "Option 2",
-            "value": "option2"
+            "name": "Multi Select Option 2",
+            "value": "multiselect-option2"
+          },
+          {
+            "name": "Multi Select Option 3",
+            "value": "multiselect-option3"
           }
         ],
         "multi": false
-      },
-      {
-        "component": "multiselect",
-        "name": "multiselect-multi",
-        "label": "Multi-Select (Multi)",
-        "description": "NOTE: Multi doesn't seem to be supported",
-        "options": [
-          {
-            "name": "Option 1",
-            "value": "option1"
-          },
-          {
-            "name": "Option 2",
-            "value": "option2"
-          }
-        ],
-        "multi": true
       },
       {
         "component": "tab",
@@ -386,13 +365,13 @@
       {
         "component": "number",
         "name": "number-single",
-        "label": "Number (Single)",
+        "label": "number-single",
         "multi": false
       },
       {
         "component": "number",
         "name": "number-multi",
-        "label": "Number (Multi)",
+        "label": "number-multi",
         "multi": true
       },
       {
@@ -403,92 +382,591 @@
       {
         "component": "select",
         "name": "select-single",
-        "label": "Select (Single)",
+        "label": "select-single",
+        "description": "NOTE: 'multi' isnt supported for 'select' in UE",
         "options": [
           {
-            "name": "Option 1",
-            "value": "option1"
+            "name": "Select Option 1",
+            "value": "select-option1"
           },
           {
-            "name": "Option 2",
-            "value": "option2"
+            "name": "Select Option 2",
+            "value": "select-option2"
+          },
+          {
+            "name": "Select Option 3",
+            "value": "select-option3"
           }
         ],
         "multi": false
       },
       {
-        "component": "select",
-        "name": "select-multi",
-        "label": "Select (Multi)",
-        "description": "NOTE: Multi doesn't seem to be supported",
-        "options": [
-          {
-            "name": "Option 1",
-            "value": "option1"
-          },
-          {
-            "name": "Option 2",
-            "value": "option2"
-          }
-        ],
-        "multi": true
-      },
-      {
         "component": "tab",
-        "label": "Grouping (single)",
+        "label": "Grouping Single Values",
         "name": "groupingsingle-tab"
       },
       {
         "component": "text",
-        "name": "grouping_text1",
-        "label": "Text 1 (Single, grouping)",
+        "name": "singlegrouping_text1",
+        "label": "singlegrouping_text1",
         "description": "Enter Text",
         "multi": false
       },
       {
         "component": "text",
-        "name": "grouping_text2",
-        "label": "Text 2 (Single, grouping)",
+        "name": "singlegrouping_text2",
+        "label": "singlegrouping_text2",
         "description": "Enter Text",
         "multi": false
       },
       {
         "component": "tab",
-        "label": "Grouping (multi)",
+        "label": "Grouping Multi Values",
         "name": "groupingmulti-tab"
       },
       {
         "component": "text",
         "name": "groupingmulti_text1",
-        "label": "Text 1 (Multi, groupingmulti)",
+        "label": "groupingmulti_text1",
         "description": "Enter Texts",
         "multi": true
       },
       {
         "component": "text",
         "name": "groupingmulti_text2",
-        "label": "Text 2 (Multi, groupingmulti)",
+        "label": "groupingmulti_text2",
         "description": "Enter Texts",
         "multi": true
       },
       {
         "component": "tab",
-        "label": "Grouping (mixed)",
+        "label": "Grouping Single/Multi Values",
         "name": "groupingmixed-tab"
       },
       {
         "component": "text",
-        "name": "groupingmixed_text1",
-        "label": "Text 1 (mixed, groupingmixed)",
+        "name": "groupingmixed_singletext1",
+        "label": "groupingmixed_singletext1",
         "description": "Enter Text",
         "multi": false
       },
       {
         "component": "text",
-        "name": "groupingmixed_text2",
-        "label": "Text 2 (mixed, groupingmixed)",
+        "name": "groupingmixed_multitext2",
+        "label": "groupingmixed_multitext2",
         "description": "Enter Texts",
         "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "Container",
+        "name": "container-tab"
+      },
+      {
+        "component": "container",
+        "name": "container-single",
+        "label": "Container (Single)",
+        "multi": false,
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "label": "Simple Text 1",
+            "name": "container-single-text1",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Simple Text 2",
+            "name": "container-single-text2",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "container-multi",
+        "label": "Container (Multi)",
+        "multi": true,
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "label": "Simple Text 1",
+            "name": "container-multi-text1",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Simple Text 2",
+            "name": "container-multi-text2",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Mulit Text 3",
+            "name": "container-multi-text3",
+            "valueType": "string",
+            "multi": true
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "label": "Grouping Containers",
+        "name": "groupingcontainers-tab"
+      },
+      {
+        "component": "container",
+        "name": "groupingcontainer_multi",
+        "label": "groupingcontainer_multi",
+        "multi": true,
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "label": "Simple Text 1",
+            "name": "grouping-container-multi-text1",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Simple Text 2",
+            "name": "grouping-container-multi-text2",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Mulit Text 3",
+            "name": "container-multi-text3",
+            "valueType": "string",
+            "multi": true
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "groupingcontainer_multitext2",
+        "label": "groupingcontainer_multitext2",
+        "description": "Enter Texts",
+        "multi": true
+      },
+      {
+        "component": "container",
+        "name": "groupingcontainer_single",
+        "label": "groupingcontainer_single",
+        "multi": false,
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "label": "Simple Text 1",
+            "name": "grouping-container-single-text1",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Simple Text 2",
+            "name": "grouping-container-single-text2",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Mulit Text 3",
+            "name": "grouping-container-single-multi-text3",
+            "valueType": "string",
+            "multi": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "multikeyvalue",
+    "fields": [
+      {
+        "component": "tab",
+        "label": "Block Options",
+        "name": "block-options-tab"
+      },
+      {
+        "component": "text",
+        "name": "classes_single",
+        "label": "Block Options (Single)",
+        "description": "Style your block with class options",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "classes_multi",
+        "label": "Block Options (Multi)",
+        "description": "Style your block with class options",
+        "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "Text",
+        "name": "text-tab"
+      },
+      {
+        "component": "text",
+        "name": "text-single",
+        "label": "text-single",
+        "description": "Enter Text",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "text-multi",
+        "label": "text-multi",
+        "description": "Enter one or more texts",
+        "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "Rich Text",
+        "name": "richtext-tab"
+      },
+      {
+        "component": "richtext",
+        "name": "richtext-single",
+        "label": "richtext-single",
+        "description": "Enter a Rich Text",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "richtext-multi",
+        "label": "richtext-multi",
+        "description": "Enter Multiple Rich Texts",
+        "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "image",
+        "name": "image-tab"
+      },
+      {
+        "component": "reference",
+        "name": "image-single",
+        "label": "image-single",
+        "description": "Select an Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "name": "image-multi",
+        "label": "image-multi",
+        "description": "Select multiple images",
+        "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "Tags",
+        "name": "tags-tab"
+      },
+      {
+        "component": "aem-tag",
+        "name": "tag-single",
+        "label": "tag-single",
+        "description": "NOTE: 'multi' isnt supported for 'tags' in UE",
+        "multi": false
+      },
+      {
+        "component": "tab",
+        "label": "Date",
+        "name": "date-tab"
+      },
+      {
+        "component": "date-time",
+        "name": "date-single",
+        "label": "date-single",
+        "description": "NOTE: 'multi' isnt supported for 'date' in UE",
+        "multi": false
+      },
+      {
+        "component": "tab",
+        "label": "AEM Content",
+        "name": "content-tab"
+      },
+      {
+        "component": "aem-content",
+        "name": "content-single",
+        "label": "content-single",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "content-multi",
+        "label": "content-multi",
+        "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "AEM Content Fragment",
+        "name": "contentfragment-tab"
+      },
+      {
+        "component": "aem-content-fragment",
+        "name": "contentfragment-single",
+        "label": "contentfragment-single",
+        "variationName": "variation-single",
+        "multi": false
+      },
+      {
+        "component": "aem-content-fragment",
+        "name": "contentfragment-multi",
+        "label": "contentfragment-multi",
+        "description": "NOTE: cant use variationName property, in that case you would use a multi container",
+        "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "Multi Select",
+        "name": "multiselect-tab"
+      },
+      {
+        "component": "multiselect",
+        "name": "multiselect-single",
+        "label": "multiselect-single",
+        "description": "NOTE: 'multi' isnt supported for 'multiselect' in UE",
+        "options": [
+          {
+            "name": "Multi Select Option 1",
+            "value": "multiselect-option1"
+          },
+          {
+            "name": "Multi Select Option 2",
+            "value": "multiselect-option2"
+          },
+          {
+            "name": "Multi Select Option 3",
+            "value": "multiselect-option3"
+          }
+        ],
+        "multi": false
+      },
+      {
+        "component": "tab",
+        "label": "Number",
+        "name": "number-tab"
+      },
+      {
+        "component": "number",
+        "name": "number-single",
+        "label": "number-single",
+        "multi": false
+      },
+      {
+        "component": "number",
+        "name": "number-multi",
+        "label": "number-multi",
+        "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "Select",
+        "name": "select-tab"
+      },
+      {
+        "component": "select",
+        "name": "select-single",
+        "label": "select-single",
+        "description": "NOTE: 'multi' isnt supported for 'select' in UE",
+        "options": [
+          {
+            "name": "Select Option 1",
+            "value": "select-option1"
+          },
+          {
+            "name": "Select Option 2",
+            "value": "select-option2"
+          },
+          {
+            "name": "Select Option 3",
+            "value": "select-option3"
+          }
+        ],
+        "multi": false
+      },
+      {
+        "component": "tab",
+        "label": "Grouping Single Values",
+        "name": "groupingsingle-tab"
+      },
+      {
+        "component": "text",
+        "name": "singlegrouping_text1",
+        "label": "singlegrouping_text1",
+        "description": "Enter Text",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "singlegrouping_text2",
+        "label": "singlegrouping_text2",
+        "description": "Enter Text",
+        "multi": false
+      },
+      {
+        "component": "tab",
+        "label": "Grouping Multi Values",
+        "name": "groupingmulti-tab"
+      },
+      {
+        "component": "text",
+        "name": "groupingmulti_text1",
+        "label": "groupingmulti_text1",
+        "description": "Enter Texts",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "groupingmulti_text2",
+        "label": "groupingmulti_text2",
+        "description": "Enter Texts",
+        "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "Grouping Single/Multi Values",
+        "name": "groupingmixed-tab"
+      },
+      {
+        "component": "text",
+        "name": "groupingmixed_singletext1",
+        "label": "groupingmixed_singletext1",
+        "description": "Enter Text",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "groupingmixed_multitext2",
+        "label": "groupingmixed_multitext2",
+        "description": "Enter Texts",
+        "multi": true
+      },
+      {
+        "component": "tab",
+        "label": "Container",
+        "name": "container-tab"
+      },
+      {
+        "component": "container",
+        "name": "container-single",
+        "label": "Container (Single)",
+        "multi": false,
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "label": "Simple Text 1",
+            "name": "container-single-text1",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Simple Text 2",
+            "name": "container-single-text2",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "container-multi",
+        "label": "Container (Multi)",
+        "multi": true,
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "label": "Simple Text 1",
+            "name": "container-multi-text1",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Simple Text 2",
+            "name": "container-multi-text2",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Mulit Text 3",
+            "name": "container-multi-text3",
+            "valueType": "string",
+            "multi": true
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "label": "Grouping Containers",
+        "name": "groupingcontainers-tab"
+      },
+      {
+        "component": "container",
+        "name": "groupingcontainer_multi",
+        "label": "groupingcontainer_multi",
+        "multi": true,
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "label": "Simple Text 1",
+            "name": "grouping-container-multi-text1",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Simple Text 2",
+            "name": "grouping-container-multi-text2",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Mulit Text 3",
+            "name": "container-multi-text3",
+            "valueType": "string",
+            "multi": true
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "groupingcontainer_multitext2",
+        "label": "groupingcontainer_multitext2",
+        "description": "Enter Texts",
+        "multi": true
+      },
+      {
+        "component": "container",
+        "name": "groupingcontainer_single",
+        "label": "groupingcontainer_single",
+        "multi": false,
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "label": "Simple Text 1",
+            "name": "grouping-container-single-text1",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Simple Text 2",
+            "name": "grouping-container-single-text2",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Mulit Text 3",
+            "name": "grouping-container-single-multi-text3",
+            "valueType": "string",
+            "multi": true
+          }
+        ]
       }
     ]
   }
