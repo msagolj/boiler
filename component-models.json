@@ -150,6 +150,28 @@
     ]
   },
   {
+    "id": "examplecf",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "cfpath",
+        "value": "",
+        "label": "Example Content Fragment path",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/dam"
+        }
+      },
+      {
+        "component": "text",
+        "name": "contentFragmentVariation",
+        "label": "Stores variation name",
+        "hidden": true
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -471,13 +493,13 @@
         "fields": [
           {
             "component": "text",
-            "label": "Simple Text 1",
+            "label": "container-single-text1",
             "name": "container-single-text1",
             "valueType": "string"
           },
           {
             "component": "text",
-            "label": "Simple Text 2",
+            "label": "container-single-text2",
             "name": "container-single-text2",
             "valueType": "string"
           }
@@ -492,20 +514,20 @@
         "fields": [
           {
             "component": "text",
-            "label": "Simple Text 1",
+            "label": "container-multi-text1",
             "name": "container-multi-text1",
             "valueType": "string"
           },
           {
             "component": "text",
-            "label": "Simple Text 2",
+            "label": "container-multi-text2",
             "name": "container-multi-text2",
             "valueType": "string"
           },
           {
             "component": "text",
-            "label": "Mulit Text 3",
-            "name": "container-multi-text3",
+            "label": "container-multi-text-multi-3",
+            "name": "container-multi-text-multi-3",
             "valueType": "string",
             "multi": true
           }
@@ -525,20 +547,20 @@
         "fields": [
           {
             "component": "text",
-            "label": "Simple Text 1",
+            "label": "grouping-container-multi-text1",
             "name": "grouping-container-multi-text1",
             "valueType": "string"
           },
           {
             "component": "text",
-            "label": "Simple Text 2",
+            "label": "grouping-container-multi-text2",
             "name": "grouping-container-multi-text2",
             "valueType": "string"
           },
           {
             "component": "text",
-            "label": "Mulit Text 3",
-            "name": "container-multi-text3",
+            "label": "grouping-container-multi-text-multi-3",
+            "name": "grouping-container-multi-text-multi-3",
             "valueType": "string",
             "multi": true
           }
@@ -553,27 +575,27 @@
       },
       {
         "component": "container",
-        "name": "groupingcontainer_single",
-        "label": "groupingcontainer_single",
-        "multi": false,
+        "name": "groupingcontainer_multi-2",
+        "label": "groupingcontainer_multi-2",
+        "multi": true,
         "collapsible": true,
         "fields": [
           {
             "component": "text",
-            "label": "Simple Text 1",
-            "name": "grouping-container-single-text1",
+            "label": "grouping-container-multi-2-text1",
+            "name": "grouping-container-multi-2-text1",
             "valueType": "string"
           },
           {
             "component": "text",
-            "label": "Simple Text 2",
-            "name": "grouping-container-single-text2",
+            "label": "grouping-container-multi-2-text2",
+            "name": "grouping-container-multi-2-text2",
             "valueType": "string"
           },
           {
             "component": "text",
-            "label": "Mulit Text 3",
-            "name": "grouping-container-single-multi-text3",
+            "label": "grouping-container-multi-2-multi-text-3",
+            "name": "grouping-container-multi-2-multi-text-3",
             "valueType": "string",
             "multi": true
           }

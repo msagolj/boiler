@@ -1,42 +1,30 @@
-function addLabels(fields, block, tableRowCounter, containerLabel = null) {
+function addLabels(fields, block, tableRowCounter,containerLabel = null) {
   // go over all fields 
   fields.forEach(field => {
 
-    // tab and classes fields are not rendered in the table rows
+    // tab and classes fields are not rendered in the table rows, skip each
     if (field.component === 'tab' || field.name.startsWith('classes')) {
       return;
     }
 
-    // if the field name includes a _,
-    if (field.name.includes('_')) {
+    let groupLabel = null;
+
+    // first check if the property is part of a group,
+    if (!containerLabel && field.name.includes('_')) {
       // extract group name
-      const groupName = field.name.split('_')[0];
+      let groupName = field.name.split('_')[0];
       // is there already a label with that group name?
       let label = document.querySelector(`.grouping-${groupName}`);
       if(label) {
-        // we expect the value to be in this same table cell
-        const propertyLabel = document.createElement('div');
-        propertyLabel.classList.add(`label`, 'property');
-        propertyLabel.appendChild(document.createTextNode(`PROPERTY: ${field.name}`));
-        label.appendChild(propertyLabel);
-        return;
+        groupLabel = label;
       } else {
         // add a new label with the group name and field name
-        label = document.createElement('div');
-        label.classList.add(`label`, `grouping-${groupName}`);
-        label.appendChild(document.createTextNode(`GROUP: ${groupName}`));
-        // we expect the value to be in this same table cell
-        const propertyLabel = document.createElement('div');
-        propertyLabel.classList.add(`label`, 'property');
-        propertyLabel.appendChild(document.createTextNode(`PROPERTY: ${field.name}`));
-        label.appendChild(propertyLabel);
-        if(!containerLabel) {
-          block.children[tableRowCounter].firstElementChild.appendChild(label);
-          tableRowCounter++;
-        } else {
-          containerLabel.appendChild(label);
-        }
-        return;
+        groupLabel = document.createElement('div');
+        groupLabel.classList.add(`label`, `grouping-${groupName}`);
+        groupLabel.appendChild(document.createTextNode(`GROUP: ${groupName}`));
+        // attach it to to the current row
+        block.children[tableRowCounter].appendChild(groupLabel);
+        tableRowCounter++;
       }
     }
 
@@ -47,21 +35,28 @@ function addLabels(fields, block, tableRowCounter, containerLabel = null) {
       label.classList.add(`label`, `container-${field.name}`);
       label.appendChild(document.createTextNode(`CONTAINER: ${field.name}`));
       label.appendChild(document.createElement('br'));
-      block.children[tableRowCounter].firstElementChild.appendChild(label);
       addLabels(field.fields, block, tableRowCounter, label);
-      tableRowCounter++;
-    }
-    
-
-    // add a label with the field name
-    const label = document.createElement('div');
-    label.classList.add(`label`);
-    label.appendChild(document.createTextNode(`PROPERTY: ${field.name}`));
-    if(!containerLabel) {
-      block.children[tableRowCounter]?.firstElementChild?.appendChild(label);
-      tableRowCounter++;
+      if(groupLabel) {
+        // it should be in the same cell as the first group entry
+        groupLabel.appendChild(label);
+      } else {
+        block.children[tableRowCounter].appendChild(label);
+        tableRowCounter++;
+        return;
+      }
     } else {
-      containerLabel.appendChild(label);
+      // add a label with the field name
+      const label = document.createElement('div');
+      label.classList.add(`label`);
+      label.appendChild(document.createTextNode(`PROPERTY: ${field.name}`));
+      if(groupLabel) {
+        groupLabel.appendChild(label);
+      } else if(containerLabel) {
+        containerLabel.appendChild(label);
+      } else {
+        block.children[tableRowCounter]?.appendChild(label);
+        tableRowCounter++;
+      } 
     }
   });
 }

@@ -14,13 +14,18 @@
 /* each table row is  flexbox */
 .block.multi > div {
   display: flex;
-  flex-direction: row nowrap;
+  flex-flow: row nowrap;
   gap: 10px;
-  flex: 1 0 auto;
-  min-height: 60px;
-  position: relative;
   padding: 5px;
 }
+
+.block.multi > div > div:first-child {
+ width: 100%;
+}
+
+.block.multi > div > div::not(:first-child) {
+  width: max-content;
+ }
 
 /* block options row styles */
 .block.multi > div.block-options {
@@ -31,12 +36,12 @@
 .block.multi  div.label { 
   background-color: #6464cf;
   color: white;
-  position: absolute;
   font-size: 12px;
   border-bottom-left-radius: 5px;
   padding: 5px;
   top: 0;
   right: 0;
+  text-wrap: nowrap;
 }
 
 .block.multi div[class*="grouping-"].label { 

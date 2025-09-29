@@ -21,7 +21,7 @@
 .block.multikeyvalue > div {
   display: flex;
   gap: 10px;
-  min-height: 60px;
+  min-height: 30px;
   position: relative;
 }
 
