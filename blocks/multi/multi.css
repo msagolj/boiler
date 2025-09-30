@@ -62,3 +62,17 @@
   border: 1px solid red;
   width: 100%;
 }
+
+/* block item styles */
+.block.multi > div[data-aue-model*="multiitem"]   {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0;
+  padding: 0;
+}
+
+/* the classes field */
+.block.multi > div[data-aue-model*="multiitem"] > div {
+  width: 20%;
+  padding: 5px;
+}

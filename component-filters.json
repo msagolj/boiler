@@ -40,5 +40,16 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "multi",
+    "components": [
+      "multiitemtext",
+      "multiitemimagetagdate",
+      "multiitemcontentfragment",
+      "multiitemselectnumber",
+      "multiitemgrouping",
+      "multiitemcontainer"
+    ]
   }
 ]
