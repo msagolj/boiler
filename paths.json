@@ -1,8 +1,10 @@
 {
   "mappings": [
     "/content/multi-support/:/",
+    "/content/dam/multi-support/:/assets/",
     "/content/multi-support/configuration:/.helix/config.json",
-    "/content/multi-support/metadata:/metadata.json"
+    "/content/multi-support/metadata:/metadata.json",
+    "/content/dam/multi-support/:/assets/"
   ],
   "includes": [
     "/content/multi-support/"
