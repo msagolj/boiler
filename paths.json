@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/xwalk/:/",
-    "/content/xwalk/configuration:/.helix/config.json",
-    "/content/xwalk/metadata:/metadata.json"
+    "/content/multi-content/:/",
+    "/content/multi-content/configuration:/.helix/config.json",
+    "/content/multi-content/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/xwalk/"
+    "/content/mulit-content/"
   ]
 }
