@@ -76,3 +76,7 @@
   width: 20%;
   padding: 5px;
 }
+
+.block.multi img{
+  width:100px;
+}
