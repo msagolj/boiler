@@ -7,6 +7,7 @@
     "/content/dam/multi-support/:/assets/"
   ],
   "includes": [
-    "/content/multi-support/"
+    "/content/multi-support/",
+    "/content/dam/multi-support"
   ]
 }
