@@ -64,7 +64,7 @@
 }
 
 /* block item styles */
-.block.multi > div:has(> div:nth-child(2)) {
+.block.multi > div:has(> div:nth-child(3)) {
   display: flex;
   flex-flow: row nowrap;
   gap: 0;
@@ -72,7 +72,7 @@
 }
 
 /* the classes field */
-.block.multi > div:has(> div:nth-child(2)) > div {
+.block.multi > div:has(> div:nth-child(3)) > div {
   width: 20%;
   padding: 5px;
 }
