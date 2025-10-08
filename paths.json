@@ -8,6 +8,6 @@
   ],
   "includes": [
     "/content/multi-support/",
-    "/content/dam/multi-support"
+    "/content/dam/multi-support/"
   ]
 }
