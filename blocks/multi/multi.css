@@ -64,7 +64,7 @@
 }
 
 /* block item styles */
-.block.multi > div[data-aue-model*="multiitem"]   {
+.block.multi > div:has(> div:nth-child(2)) {
   display: flex;
   flex-flow: row nowrap;
   gap: 0;
@@ -72,7 +72,7 @@
 }
 
 /* the classes field */
-.block.multi > div[data-aue-model*="multiitem"] > div {
+.block.multi > div:has(> div:nth-child(2)) > div {
   width: 20%;
   padding: 5px;
 }
