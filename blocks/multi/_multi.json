@@ -424,6 +424,13 @@
               "name": "container-multi-text-multi-3",
               "valueType": "string",
               "multi": true
+            },
+            {
+              "component": "richtext",
+              "label": "container-multi-text-multi-4",
+              "name": "container-multi-text-multi-4",
+              "valueType": "string",
+              "multi": true
             }
           ]
         },
