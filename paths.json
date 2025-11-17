@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/xwalk/:/",
-    "/content/xwalk/configuration:/.helix/config.json",
-    "/content/xwalk/metadata:/metadata.json"
+    "/content/aem-sites-with-edge-delivery-services-template/:/",
+    "/content/aem-sites-with-edge-delivery-services-template/configuration:/.helix/config.json",
+    "/content/aem-sites-with-edge-delivery-services-template/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/xwalk/"
+    "/content/aem-sites-with-edge-delivery-services-template/"
   ]
 }
