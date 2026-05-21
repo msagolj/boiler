@@ -1,5 +1,5 @@
 {
-  "project": "myboiler",
+  "project": "testsite",
   "editUrlLabel": "AEM Editor",
   "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
 }
