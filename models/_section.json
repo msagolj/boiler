@@ -51,7 +51,8 @@
         "cards",
         "columns",
         "fragment",
-        "testimage"
+        "testimage",
+        "asset"
       ]
     }
   ]
